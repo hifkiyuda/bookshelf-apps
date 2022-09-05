@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+}
+
+main {
+    padding: 0 40px;
+}
+
+main section {
+    border: 4px solid black;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+button {
+    padding: 5px 10px;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    border: 2px solid black;
+    cursor: pointer;
+    margin: 5px;
+    transition: all .2s ease;
+    background-color: #ffcba6;
+}
+button:active {
+    transform: scale(0.96);
+}
+#bookSubmit:hover {
+    background-color: #e4603d;
+    color: white;
+}
+#searchSubmit:hover {
+    background-color: #e6b3ff;
+}
+.buttons .finished,
+.popup-buttons .yes {
+    background-color: #2dea98;
+}
+.buttons .delete,
+.popup-buttons .no {
+    background-color: #de3f3f;
+    color: white;
+}
+
+.header-bar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px 40px;
+    padding-top: 40px;
+}
+.header-bar h1 {
+    line-height: 2rem;
+}
+.header-bar p {
+    text-align: right;
+}
+
+.input-and-search-book {
+    display: flex;
+    width: 100%;
+}
+.book-input-section {
+    flex-basis: 60%;
+    background-color: #5a60f1;
+    color: white;
+}
+.book-search-section {
+    flex-basis: 40%;
+    background-color: #e4603d;
+    color: white;
+    border-left: none;
+}
+.bookshelf-section {
+    background-color: #e6b3ff;
+}
+
+.book-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0;
+}
+.book-list {
+    padding: 20px 0;
+}
+
+.input-box {
+    padding: 10px;
+    border: 2px solid black;
+    margin: 5px;
+    font-family: 'Space Mono', monospace;
+}
+#bookSearchBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.delete-popup-section {
+    height: 40vh;
+    width: 40vw;
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 6px 6px 12px rgba(0,0,0,0.4);
+    background-color: #ffcba6;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all .2s ease;
+}
+.delete-popup-section.show {
+    top: 50%;
+}
+.popup-buttons button {
+    width: 80px;
+    padding: 5px;
+    margin: 10px;
+}
+
+@media screen and (max-width: 992px) {
+    .delete-popup-section {
+        height: 30vh;
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 0 20px;
+    }
+
+    main section {
+        border: 4px solid black;
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+
+    .header-bar {
+        padding: 5px 20px;
+        padding-top: 20px;
+    }
+
+    .book-list {
+        padding: 15px 0;
+    }
+
+    .delete-popup-section {
+        height: 30vh;
+        width: 60vw;
+    }
+
+    .delete-popup-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .popup-buttons button {
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    main section {
+        border: 4px solid black;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .header-bar {
+        padding: 5px 10px;
+        padding-top: 10px;
+    }
+
+    .book-list {
+        padding: 10px 0;
+    }
+
+    .input-and-search-book {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-box {
+        padding: 8px;
+    }
+
+    .book-search-section {
+        border-left: 4px solid black;
+    }
+
+    #bookSearchBox {
+        padding-top: 10px;
+    }
+
+    .book-item .buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .delete-popup-section {
+        height: 25vh;
+        width: 80vw;
+    }
+
+    .delete-popup-section h2 {
+        font-size: 1.1rem;
+    }
+
+    .popup-buttons button {
+        width: 60px;
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header-bar">
+        <h1>Bookshelf<br>Apps_</h1>
+        <p>&copy;Created by Hifki YP</p>
+    </header>
+
+    <main>
+        <div class="input-and-search-book">
+            <section class="book-input-section">
+                <h2>Masukkan Buku baru_</h2>
+                    <form id="bookInputForm">
+                        <div class="book-input">
+                            <label for="bookInputTitle">Judul Buku</label>
+                            <input class="input-box" id="bookInputTitle" type="text" required>
+                        </div>
+                        <div class="book-input">
+                            <label for="bookInputAuthor">Penulis Buku</label>
+                            <input class="input-box" id="bookInputAuthor" type="text" required>
+                        </div>
+                        <div class="book-input">
+                            <label for="bookInputYear">Tahun Terbit Buku</label>
+                            <input class="input-box" id="bookInputYear" type="number" required>
+                        </div>
+                        <div class="book-input-is-finished">
+                            <label for="bookInputIsFinished">Telah selesai dibaca</label>
+                            <input id="bookInputIsFinished" type="checkbox">
+                        </div>
+                        <button id="bookSubmit" type="submit">Masukkan buku ke rak</button>
+                    </form>
+            </section>
+            <section class="book-search-section">
+                <h2>Cari Buku_?</h2>
+                <form id="bookSearchBox">
+                    <label for="bookSearchTitle">Masukkan Judul</label>
+                    <input class="input-box" id="bookSearchTitle" type="text">
+                    <button id="searchSubmit" type="submit">Cari</button>
+                </form>
+            </section>
+        </div>
+        <section class="bookshelf-section">
+            <h2>Belum selesai dibaca_</h2>
+            <div id="bookUnfinishedReadingList" class="book-list">
+                <!-- data buku disini -->
+            </div>
+        </section>
+        <section class="bookshelf-section">
+            <h2>Selesai dibaca_</h2>
+            <div id="bookFinishedReadingList" class="book-list">
+                <!-- data buku disini -->
+            </div>
+        </section>
+        <section class="delete-popup-section" id="popupDialog">
+            <h2>Apakah kamu yakin ingin menghapusnya?</h2>
+            <div class="popup-buttons">
+                <button class="yes">Ya</button>
+                <button class="no">Tidak</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
